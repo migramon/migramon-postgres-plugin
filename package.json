@@ -1,0 +1,37 @@
+{
+  "name": "@migramon/postgres-plugin",
+  "version": "0.0.0-alpha.1",
+  "description": "",
+  "main": "index",
+  "scripts": {
+    "prepack": "npx tsc --noEmit false",
+    "postpublish": "npm run clean",
+    "clean": "npx module-kit-clean"
+  },
+  "bin": {
+    "migramon": "./bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migramon/migramon-postgres-plugin.git"
+  },
+  "keywords": ["migrate", "postgres"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migramon/migramon-postgres-plugin/issues"
+  },
+  "homepage": "https://github.com/migramon/migramon-postgres-plugin#readme",
+  "peerDependencies": {
+    "@migramon/migrate": "^0.0.0-alpha.1"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.1",
+    "@types/pg": "^8.6.5",
+    "module-kit": "^0.1.0",
+    "@migramon/migrate": "^0.0.0-alpha.1",
+    "typescript": "^4.7.4"
+  }
+}
