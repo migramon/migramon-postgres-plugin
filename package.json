@@ -1,6 +1,6 @@
 {
   "name": "@migramon/postgres-plugin",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.1",
   "description": "",
   "main": "index",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/migramon/migramon-postgres-plugin#readme",
   "peerDependencies": {
-    "@migramon/migrate": "^0.0.0-alpha.1"
+    "@migramon/migrate": "^0.0.1"
   },
   "dependencies": {
   },
