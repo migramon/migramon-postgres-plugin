@@ -25,19 +25,19 @@ import { PgPlugin, PgStore } from '@migramon/postgres-plugin'
 const client = new pg.Client({ ... })
 
 async function setup() {
-    // here you can wait for db connection
-    await client.connect()
+  // here you can wait for db connection
+  await client.connect()
 
-    const pgPlugin = new PgPlugin({client})
-    // you can use store only variant (without plugin)
-    // const store = new PgStore({client})
+  const pgPlugin = new PgPlugin({client})
+  // you can use store only variant (without plugin)
+  // const store = new PgStore({client})
 
-    const migrator = new Migrator({
-        store: pgPlugin.store, // migration state will be stored in postgres
-        plugins: [pgPlugin], // plugin will wrap migrations into transaction
-    })
+  const migrator = new Migrator({
+    store: pgPlugin.store, // migration state will be stored in postgres
+    plugins: [pgPlugin], // plugin will wrap migrations into transaction
+  })
 
-    return migrator
+  return migrator
 }
 
 export default setup
