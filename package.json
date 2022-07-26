@@ -1,15 +1,12 @@
 {
   "name": "@migramon/postgres-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index",
   "scripts": {
     "prepack": "npx tsc --noEmit false",
     "postpublish": "npm run clean",
     "clean": "npx module-kit-clean"
-  },
-  "bin": {
-    "migramon": "./bin/cmd.js"
   },
   "repository": {
     "type": "git",
