@@ -1,6 +1,6 @@
 {
   "name": "@migramon/postgres-plugin",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "main": "index",
   "scripts": {
@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/migramon/migramon-postgres-plugin.git"
   },
-  "keywords": ["migrate", "postgres"],
+  "keywords": [
+    "migrate",
+    "postgres"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -22,8 +25,7 @@
   "peerDependencies": {
     "@migramon/migrate": ">=0.0.1 <1.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.6.1",
     "@types/pg": "^8.6.5",
