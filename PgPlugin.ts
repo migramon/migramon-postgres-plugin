@@ -16,7 +16,19 @@ class PgPlugin implements MigraMonPlugin {
     this.client = client
   }
 
+  async makeSureSchemaSelected(){
+    const { rows: schemaRows } = await this.client.query<{ schema: string | null }>(`SELECT current_schema() as schema;`)
+    const { schema } = schemaRows[0] || {}
+
+    if(!schema) {
+      // current_schema() can be null during initialization of database
+      await this.client.query('SET schema \'public\';')
+    }
+  }
+
   async onBeforeMigrations() {
+    await this.makeSureSchemaSelected()
+
     await this.client.query('BEGIN TRANSACTION;')
   }
 
